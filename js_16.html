@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <titl></titl>
+    </head>
+    <body>
+        <h2>제어문</h2>
+        <hr>
+        <form>
+            <input type="text" id="fruits" placeholder="과일을 입력해주세요">
+            <input type="button" value="확인" onclick="func()">
+            <input type="reset" value="취소">
+        </form>
+
+        <script>
+            function func(){
+                var fruits = document.getElementById("fruits").value;
+
+                switch(fruits){
+                    case "apple" :
+                        alert("사과는 2000원입니다.");
+                        break;
+                    default :
+                        alert("다른 과일을 입력해보세요.");
+                }
+            }
+        </script>
+    </body>
+</html>

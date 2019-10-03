@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <titl></titl>
+    </head>
+    <body>
+        <h2>제어문</h2>
+        <hr>
+        <form>
+            <input type="text" id="score" placeholder="점수를 입력해주세요">
+            <input type="button" value="확인" onclick="func()">
+            <input type="reset" value="취소">
+        </form>
+
+        <script>
+            function func(){
+                var score = document.getElementById("score").value;
+                var grade;
+                score = parseInt(score/10);
+
+                if(score == 10 || score == 9)
+                    grade = "A";
+                else if(score == 8)
+                    grade = "B";
+                else if(score == 7)
+                    grade = "C";
+                else if(score == 6)
+                    grade = "D";
+                else
+                    grade = "E";    
+
+                alert("당신의 등급은 "+grade+"입니다.");
+            }
+        </script>
+    </body>
+</html>

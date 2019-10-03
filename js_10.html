@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS에서 HTML요소에 접근하는 방법</title>
+        <script>
+            function calc(){
+                var x = document.getElementById("num1").value;
+                var y = document.getElementById("num2").value;
+                    
+                var sum = parseInt(x) + parseInt(y);
+    
+                document.getElementById("total").value = sum;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>자바스크립트에서 html요소에 접근하는 방법</h2>
+        <form>
+            <table>
+                <tr>
+                    <td>첫번째 정수</td>
+                    <td><input type="text" name="num1" id="num1"></td>
+                </tr>
+                <tr>
+                    <td>두번째 정수</td>
+                    <td><input type="text" name="num2" id="num2"></td>
+                </tr>
+                <tr>
+                    <td>총합</td>
+                    <td><input type="text" name="total" id="total"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="계산" style="width:80px;" onclick="calc()"><input type="reset" value="취소" style="width:80px;"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

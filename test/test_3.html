@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var sum = 0;
+            var cnt = 0;
+
+            for(var i = 100; i <= 999; i++){
+                if(i % 7 == 0){
+                    sum += i;
+                    cnt++;
+                }
+            }
+
+            document.write("100 - 999 사이에 7의 배수의 합 : "+sum+"<br>");
+            document.write("100 - 999 사이에 7의 배수의 개수 : "+cnt);
+        </script>
+    </body>
+</html>

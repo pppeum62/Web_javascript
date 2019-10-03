@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS에서 HTML요소에 접근하는 방법</title>
+    </head>
+    <body>
+        <h1 id="txt">This is JavaScript</h1>
+        <input type="button" value="클릭" onclick="func()">
+        <script>
+            function func(){
+                document.getElementById("txt").style.color = "red";
+            }
+        </script>
+    </body>
+</html>

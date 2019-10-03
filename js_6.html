@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+                // document.write("<h1>Welcome!</h1>");
+                // document.write("<h2>3+5=</h2>");
+                // document.write("<h3>8입니다.</h3>");
+
+                var uid = prompt("아이디를 입력하세요", "홍길동");
+                // uid = null 취소버튼이나 다이얼로그 창을 닫음
+                // uid == "" 입력되지 않음
+                // uid == 값 출력
+
+                if(uid == "")
+                    alert("값이 입력되지 않았습니다.");
+                else if(uid == null)
+                    alert("취소 버튼을 선택하셨습니다.");
+                else
+                    document.write("입력된 아이디 : "+uid);
+        </script>
+    </body>
+</html>
