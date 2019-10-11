@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+
+            document.write("1부터 100까지 3의로 나눈 나머지가 1인 수만 더하기 >> ");
+
+            var sum = 0;
+
+            for(var i = 1; i <= 100; i++){
+                if(i % 3 == 1)
+                    sum += i;
+                continue;
+            }
+
+            document.write(sum);
+        </script>
+    </body>
+</html>

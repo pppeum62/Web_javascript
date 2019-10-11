@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>숫자 맞추기</h3>
+        <hr>
+        이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다.<br>
+        숫자는 1부터 100 사이에 있습니다.
+        <form method="POST" action="#">
+            숫자 : <input type="text" id="x">&nbsp;<input type="button" value="확인" onclick="guess()"><br>
+            횟수 : <input type="text" id="y"> 힌트 : <input type="text" id="sum">
+        </form>
+
+        <script>
+            var cnt = 0;
+
+            function guess(){
+                var com = 53;
+                var guess_value = document.getElementById("x").value;
+
+                cnt++;
+
+                if(guess_value > com){
+                    document.getElementById("sum").value = "Down!";
+                }
+                else if(guess_value < com){
+                    document.getElementById("sum").value = "Up!";
+                }
+                else if(guess_value == com){
+                    document.getElementById("sum").value = "정답입니다!";
+                }
+                if(cnt > 5){
+                    document.getElementById("sum").value = "실행횟수를 초과했습니다";
+                }
+                
+                document.getElementById("y").value = cnt;
+            }
+        </script>
+    </body>
+</html>
