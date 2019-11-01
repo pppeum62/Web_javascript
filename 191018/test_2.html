@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script>
+        var n = parseInt(prompt("n값 입력"));
+        var m = parseInt(prompt("m값 입력"));
+
+        function sum(x, y) {
+            var sum = 0;
+
+            for(var i = x; i <= y; i++){
+                sum += i;
+            }
+
+            return(sum)
+        }
+
+        var total = sum(n, m);
+
+        alert(n+"부터"+m+"까지의 합은 >> "+total);
+    </script>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <script>
+        function car(model, speed, color) {
+            this.model = model;
+            this.speed = speed;
+            this.color = color;
+
+            function brake() {
+                this.speed -= 10;
+                
+                return this.speed;
+            }
+
+            function accel() {
+                this.speed += 10;
+
+                return this.speed;
+            }
+        }
+
+        var c1 = new car ('QM3', 80, 'dark-blue');
+        var c2 = new car ('mini', 75, 'white');
+
+        console.log("모델 : " + c1.model + " 현재 속도 : " + c1.speed + " 색상 : " + c1.color);
+        console.log("모델 : " + c2.model + " 현재 속도 : " + c2.speed + " 색상 : " + c2.color);
+
+        /*var car = {
+            model : 'mini',
+            speed : 80,
+            color : 'white',
+            brake : function() {
+                this.speed -= 10;
+
+                return this.speed;
+            },
+            accel : function() {
+                this.speed += 10;
+
+                return this.speed;
+            }
+        }
+
+        console.log(car.speed);*/
+
+    </script>
+    <body>
+    </body>
+</html>

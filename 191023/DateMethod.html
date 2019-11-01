@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script>
+        var date1 = new Date();
+        var y = date1.getFullYear();
+        var mon = date1.getMonth() + 1;
+        var d = date1.getDate();
+        var h = date1.getHours();
+        var m = date1.getMinutes();
+        var s = date1.getSeconds();
+        var ms = date1.getMilliseconds();
+
+        document.write("<h3>Date 객체로 현재 시간 알아내기</h3>");
+        document.write("<hr>");
+        document.write("현재 시간 : " + date1.toLocaleString());
+        document.write("<hr>");
+        document.write(y+"년도<br>");
+        document.write(mon+"월<br>");
+        document.write(d+"일<br>");
+        document.write(h+"시<br>");
+        document.write(m+"분<br>");
+        document.write(s+"초<br>");
+        document.write(ms+"밀리초<br>");
+        document.write("<hr>");
+        document.write("next.toLocaleString() : " + date1.toLocaleString());
+    </script>
+    <body>
+
+    </body>
+</html>

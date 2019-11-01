@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <script>
+        var car = {
+            model : 'mini',
+            speed : 80,
+            color : 'white',
+            brake : function() {
+                this.speed -= 10;
+
+                return this.speed;
+            },
+            accel : function() {
+                this.speed += 10;
+
+                return this.speed;
+            }
+        }
+
+        console.log(car.speed);
+
+    </script>
+    <body>
+    </body>
+</html>

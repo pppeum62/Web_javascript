@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script>
+        var now = new Date();
+        var second1 = now.getSeconds();
+
+        document.write("<h3>페이지 방문 초 시간이 짝수면 violet, 홀수면 lightskyblue 배경</h3>");
+        document.write("<hr>");
+        document.write("현재 시간 : " + now.toLocaleTimeString());
+
+        if(second1 % 2 == 0) {
+            document.body.style.backgroundColor="violet";
+        } else {
+            document.body.style.backgroundColor="lightskyblue";
+        }
+    </script>
+    <body>
+
+    </body>
+</html>

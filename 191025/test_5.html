@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script>
+        document.write("<h3>오전이면 오렌지 오후면 스카이블루</hr>");
+        document.write("<hr>");
+    
+        var now = new Date();
+        var h = now.getHours();
+
+        document.write("현재 시간 : " + now.toLocaleTimeString());
+
+        if(h > 12) {
+            document.body.style.backgroundColor = "lightskyblue";
+        } else {
+            document.body.style.backgroundColor = "orange";
+        }
+    </script>
+    <body>
+    </body>
+</html>

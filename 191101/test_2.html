@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <script>
+        function Student(name, score) {
+            this.name = name;
+            this.score = score;
+
+            this.getGrade = function() {
+                if(score >= 80){
+                    return 'A';
+                }
+                else{
+                    return 'F';
+                }
+            }
+        }
+
+        var kim = new Student('kim', 56);
+        var lee = new Student('lee', 94);
+
+        console.log("이름 : " + kim.name + " 점수 : " + kim.score + " 등급 : " + kim.getGrade());
+        console.log("이름 : " + lee.name + " 점수 : " + lee.score + " 등급 : " + lee.getGrade());
+    </script>
+    <body>
+    </body>
+</html>

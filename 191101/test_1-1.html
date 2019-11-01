@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <script>
+        var account = new Object();
+        account.owner = 'kim';
+        account.code = 1111;
+        account.balance = 3500;
+        account.deposit = deposit;
+        account.withdraw = withdraw;
+
+        function deposit(money) {
+            account.balance += money;
+
+            return account.balance;
+        }
+
+        function withdraw(money) {
+            account.balance -= money;
+
+            return account.balance;
+        }
+        
+        var result = account.deposit(100);
+        console.log(result);
+
+    </script>
+    <body>
+    </body>
+</html>

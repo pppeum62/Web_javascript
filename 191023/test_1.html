@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script>
+        var degree = Array(5);
+        var sum = 0;
+
+        for(var i = 0; i < degree.length; i++){
+            degree[i] = parseInt(prompt((i+1)+"번 온도 입력"));
+            sum += degree[i];
+        }
+
+        document.write("평균 온도 : "+sum / degree.length);
+    </script>
+    <body>
+
+    </body>
+</html>

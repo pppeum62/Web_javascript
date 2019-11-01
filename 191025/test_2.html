@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>난수 발생</title>
+    </head>
+    <script>
+        function randomInt() {
+            return Math.floor(Math.random()*9) + 1;
+        }
+
+        var n = randomInt();
+        var m = randomInt();
+
+        var result = n * m;
+
+        var user = prompt(n + " x " + m + " 값은?");
+
+        document.write("<h3>구구단 퀴즈</h3><hr>");
+
+        if(user == result) {
+            document.write("정답입니다!");
+        } else {
+            document.write("오답입니다! 정답은 " + result + "입니다!");
+        }
+    </script>
+    <body>
+    </body>
+</html>

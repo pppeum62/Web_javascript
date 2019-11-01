@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script>
+        var n = new Array();
+        for(var i = 0; i < 5; i++) {
+            n[i] = parseInt(prompt((i+1)+"번 정수를 입력하세요"));
+        }
+        var max = function(n) {
+            var bigger = n[0];
+            for(var i = 1; i < 5; i++) {
+                if(bigger < n[i]) {
+                    bigger = n[i];
+                }
+            }
+
+            return bigger;
+        }
+
+        var bigger = max(n);
+
+        document.write("입력받은 정수 중 가장 큰 정수는 "+bigger+"입니다.");
+    </script>
+    <body>
+
+    </body>
+</html>
