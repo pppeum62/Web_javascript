@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <script>
+        function sin() {
+            var n = document.getElementById('input').value;
+            var result = Math.sin(n);
+            document.getElementById('result').value = result;
+        }
+
+        function log() {
+            var n = document.getElementById('input').value;
+            var result = Math.log(n);
+            document.getElementById('result').value = result;
+        }
+
+        function sqrt() {
+            var n = document.getElementById('input').value;
+            var result = Math.sqrt(n);
+            document.getElementById('result').value = result;
+        }
+
+        function abs() {
+            var n = document.getElementById('input').value;
+            var result = Math.abs(n);
+            document.getElementById('result').value = result;
+        }
+    </script>
+    <body>
+        <h3>수학공식 계산</h3>
+        <hr>
+        입력
+        <input type="text" id="input"><br>
+        계산 결과
+        <input type="text" id="result"><br>
+        <input type="button" value="sin" onclick="sin()">
+        <input type="button" value="log" onclick="log()">
+        <input type="button" value="sqrt" onclick="sqrt()">
+        <input type="button" value="abs" onclick="abs()">
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <script>
+        function book(title, author, price) {
+            this.title = title;
+            this.author = author;
+            this.price = price;
+
+            this.read = function() {
+                return "책을 읽는다.";
+            }
+
+            this.buy = function() {
+                return this.title+"은/는 "+this.price+"원입니다.";
+            }
+        }
+
+        var b1 = new book ("어린왕자", "생텍쥐페리", 9000);
+
+        console.log(b1.read());
+        console.log(b1.buy());
+    </script>
+    <body>
+    </body>
+</html>
