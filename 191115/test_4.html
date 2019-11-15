@@ -3,6 +3,8 @@
     <head>
         <title></title>
         <script>
+            var divCnt = 0;
+
             function createDIV() {
                 var mybody = document.getElementById("parent");
                 var newDiv = document.createElement("div");
@@ -11,12 +13,19 @@
                 newDiv.style.backgroundColor = "yellow";
 
                 mybody.appendChild(newDiv);
+
+                divCnt++;
             }
 
             function removeDIV() {
+                if(divCnt == 0) {
+                    alert("삭제할 div가 없습니다!");
+                    return;
+                }
                 var mybody = document.getElementById("parent");
 
                 mybody.removeChild(mybody.lastChild);
+                divCnt--;
             }
         </script>
     </head>
