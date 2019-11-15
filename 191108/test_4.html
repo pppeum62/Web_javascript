@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>innerHTML 활용 : 아래 글자를 클릭하면 사진이 나옵니다.</h3>
+        <hr>
+        <p style="color:blue" onclick="change()">여기를 <span id="myspan" style="color:red">클릭하세요</span></p>
+        <script>
+            function change() {
+                var span = document.getElementById("myspan");
+                span.innerHTML = "<img src=./img/2.jpg>";
+            }
+        </script>
+    </body>
+</html>

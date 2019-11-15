@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function change() {
+                var myspan = document.getElementsByTagName("span");
+
+                for(var i = 0; i < myspan.length; i++) {
+                    myspan[i].style.color = "orange";
+                    myspan[i].style.fontSize = "30px";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>버튼을 눌러보세요</h3>
+        <input type="button" value="누르세요" onclick="change()">
+        <hr>
+        <div>
+            동백은 <span>용식</span>에게 까불이 잡을 때까지만 필구를<br>
+            <span>강종렬</span>에게 맡기겠다고 털어놨다.<br>
+            용식은 "빨리 까불이 쳐 넣고 <span>필구</span> 컴백하게 하겠다"고 약속했다.<br>
+            필구는 동백과 쿨하게 헤어졌지만 <span>강종렬</span>의 차 안에서 터트렸다.
+        </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>this 활용</h3>
+        <hr>
+        <input type="button" value="버튼" id="btn1" onclick="change(this, 'red', '30px')">
+        <input type="button" value="버튼" id="btn2" onclick="change(this, 'blue', '50px')">
+        <script>
+            function change(object, color, size) {
+                var btn = object;
+                btn.style.color = color;
+                btn.style.fontSize = size;
+            }
+        </script>
+    </body>
+</html>

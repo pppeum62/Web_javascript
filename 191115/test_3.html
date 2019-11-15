@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function opentext() {
+                var txt = document.getElementById("srcText");
+                var win = window.open("","HTML 문서","width=300, height=300");
+                win.document.open();
+                win.document.write(txt.value);
+                win.document.close();
+            }
+        </script>
+    </head>
+    <body>
+        <h3>HTML 문서 작성기 만들기</h3>
+        <hr>
+        아래에 HTML 문서를 작성하고 버튼을 클릭해보세요.<br>
+        <textarea id="srcText" style="width: 300px; height: 150px;"></textarea><br>
+        <input type="button" value="HTML 문서 출력하기" onclick="opentext()">
+    </body>
+</html>
