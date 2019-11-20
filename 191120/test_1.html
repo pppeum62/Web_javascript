@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function borderView() {
+                var change = document.getElementById('border');
+                change.style.border = "3px dotted red";
+            }
+
+            function pCnt() {
+                var cnt = document.getElementsByTagName('p');
+
+                alert(cnt.length);
+            }
+        </script>
+    </head>
+    <body>
+        <h3>자바스크립트란</h3>
+        <input type="button" value="border" onclick="borderView()">
+        <input type="button" value="p" onclick="pCnt()">
+        <hr>
+        <p>안녕하세요 여기는 첫번째 문장입니다.</p>
+        <p><span id="border">border 버튼을 누르면 여기가 강조됨</span> 한 번 눌러보세요</p>
+        <P>하하하하ㅏ하하하하하하</P>
+    </body>
+</html>

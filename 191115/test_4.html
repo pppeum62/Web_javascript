@@ -14,6 +14,11 @@
 
                 mybody.appendChild(newDiv);
 
+                newDiv.onclick=function() {
+                    var p = this.parentElement;
+                    p.removeChild(this);
+                }
+
                 divCnt++;
             }
 

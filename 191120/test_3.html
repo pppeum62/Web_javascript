@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            span {
+                visibility: hidden;
+                color: green;
+            }
+        </style>
+        <script>
+            // 속성을 가지고 오는 것 : window.getcomputedstyle(span[i]);
+            // 속성의 값을 가지고 오는 것 : getPropertyValue('visibility');
+            function show_hide() {
+                var span = document.getElementsByTagName('span');
+                for(var i = 0; i < span.length; i++) {
+                    var compStyle = window.getComputedStyle(span[i]);
+                    var txt = compStyle.getPropertyValue('visibility');
+
+                    if(txt == 'hidden') {
+                        span[i].style.visibility = "visible";
+                    } else {
+                        span[i].style.visibility = "hidden";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>다음 괄호 안에 숨은 단어?</h3>
+        <input type="button" value="show/hide" onclick="show_hide()">
+        <hr>
+        <ul>
+            <li>뭉쳐야 ( <span>찬다</span> )</li>
+            <li>아는 ( <span>형님</span> )</li>
+            <li>응답하라 ( <span>1994</span> )</li>
+        </ul>
+
+    </body>
+</html>

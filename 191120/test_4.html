@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script>
+        function init() {
+            var p = document.getElementById("p");
+            p.addEventListener('mouseover', over);
+            // p.addEventListener('mouseout', out);
+
+            p.addEventListener('mouseout', function() {
+                p.style.color='black';
+            });
+        }
+
+        function over() {
+            p.style.color='green';
+        }
+
+        /*
+        function out() {
+            p.style.color='black';
+        }
+        */
+    </script>
+    <body onload="init()">
+        <h3>이벤트 리스너</h3>
+        <hr>
+        <p onmouseover="this.style.color='green'" onmouseout="this.style.color='black'">마우스를 올려보세요 html 태그 안에서 작성</p>
+        <p id="p">마우스를 올려보세요 addEventListener() & 익명 함수 사용</p>
+    </body>
+</html>
