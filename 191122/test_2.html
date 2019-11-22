@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>onclick, 계산기 만들기</h3>
+        <hr>
+        <p>계산하고자 하는 수식을 입력하고 계산 버튼을 눌러보세요</p>
+        식 <input type="text" id="n"><br>
+        값 <input type="text" id="result">
+        <input type="button" value="계산" onclick="cal()">
+
+        <script>
+            function cal() {
+                var txt = eval(document.getElementById('n').value);
+                document.getElementById('result').value = txt;
+            }
+        </script>
+    </body>
+</html>

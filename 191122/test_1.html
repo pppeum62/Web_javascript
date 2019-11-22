@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>이벤트 객체의 프로퍼티 출력</h3>
+        <hr>
+        <p id="p">버튼을 클릭하면 이벤트 객체를 출력합니다.</p>
+        <button onclick="f(event)">클릭하세요</button>
+
+        <script>
+            function f(e) {
+                document.write(e.type);
+                document.write(e.target);
+                document.write(e.currenttarget);
+                /*var p = document.getElementById('p');
+                p.innerHTML = document.write('type : ' + event.type);*/
+            }
+        </script>
+    </body>
+</html>
