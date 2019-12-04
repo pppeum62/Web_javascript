@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script>
+        var files = ['../1.jpg', '../2.jpg', '../3.jpg'];
+        var arr = new Array();
+        for(var i = 0; i < files.length; i++) {
+            arr[i] = new Image();
+            arr[i].src = files[i];
+        }
+    </script>
+    <body>
+        <h3>이미지 슬라이드</h3>
+        <hr>
+        <p><img src="../1.jpg" onclick="changeImage()"></p>
+    </body>
+</html>

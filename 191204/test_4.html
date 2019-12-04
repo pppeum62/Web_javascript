@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script>
+        function changeImage() {
+            var sel = document.getElementById('sel');
+            var imga = document.getElementById('myimg');
+            imga.src = sel.options[sel.selectedIndex].value;
+
+            var myspan = document.getElementById('myspan');
+            
+            myspan.innerHTML = imga.width + " x " + imga.height;
+        }
+    </script>
+    <body onload="changeImage()">
+        <h3>onload로 이미지 출력</h3>
+        <hr>
+        <select id="sel" onchange="changeImage()">
+            <option value="../1.jpg">첫번째 사진</option>
+            <option value="../2.jpg">두번째 사진</option>
+            <option value="../3.jpg">세번째 사진</option>
+        </select>
+        <span id="myspan">이미지 크기</span>
+        <p><img id="myimg" src="../1.jpg"></p>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>img</title>
+    <style>
+        #btn {
+            width: 150px;
+            height: 80px;
+            background: orange;
+            border: 1px solid;
+        }
+    </style>
+    <script>
+        function change() {
+            var myimg = document.getElementById('myimg');
+
+            myimg.src = '../2.jpg';
+            // myimg.width = '200';
+            alert(myimg.width + " " + myimg.height);
+        }
+    </script>
+</head>
+
+<body>
+    <img src="../1.jpg" id="myimg" width="600px"><br>
+    <input type="button" id="btn" name="" value="이미지 바꾸기" onclick="change()">
+</body>
+
+</html>
