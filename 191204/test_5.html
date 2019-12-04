@@ -3,17 +3,34 @@
     <head>
         <title></title>
     </head>
+    <style>
+        img { width: 300px; }
+    </style>
     <script>
-        var files = ['../1.jpg', '../2.jpg', '../3.jpg'];
+        var index = 0;
+
+        var files = ['../1.jpg', '../2.jpg', '../3.jpg', '../4.jpg', '../5.jpg', '../6.jpg', '../7.jpg'];
         var arr = new Array();
         for(var i = 0; i < files.length; i++) {
             arr[i] = new Image();
             arr[i].src = files[i];
         }
+
+        function changeImage() {
+            var myimg = document.getElementById('myimg');
+            myimg.src = arr[index].src;
+
+            index++;
+
+            if(index == 7) {
+                index = 0;
+            }
+        }
     </script>
     <body>
         <h3>이미지 슬라이드</h3>
         <hr>
-        <p><img src="../1.jpg" onclick="changeImage()"></p>
+        이미지를 클릭하면 이미지가 바뀝니다.
+        <p><img src="../1.jpg" id="myimg" onclick="changeImage()"></p>
     </body>
 </html>
