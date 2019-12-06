@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+
+</style>
+<script>
+    function change(obj) {
+        var pay = document.getElementById("pay");
+        var result = parseInt(pay.value);
+
+        if(obj.checked == true) {
+            result += parseInt(obj.value);
+        } else {
+            result -= parseInt(obj.value);
+        }
+
+        pay.value = result;
+    }
+</script>
+
+<body>
+    <h3>자동계산</h3>
+    <hr>
+
+    <input type="checkbox" value="10000" onclick="change(this)"> 모자 1만원
+    <input type="checkbox" value="30000" onclick="change(this)"> 구두 3만원
+    <input type="checkbox" value="80000" onclick="change(this)"> 명품 가방 8만원
+    <br>
+    지불하실 금액
+    <input type="text" id="pay" value="0">
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+
+</style>
+<script>
+    function view() {
+        var ck = document.getElementsByName('animal');
+
+        if (ck[0].checked == true) {
+            alert('개 선택됨');
+        } else if (ck[1].checked == true) {
+            alert('소 선택됨');
+        } else if (ck[2].checked == true) {
+            alert('말 선택됨');
+        } else {
+            alert('선택된 값 없음');
+        }
+    }
+</script>
+
+<body>
+    <h3>버튼을 클릭하면 선택된 라디오 버튼의 value가 출력됩니다.</h3>
+    <hr>
+    
+    <input type="radio" name="animal" value="dog">개
+    <input type="radio" name="animal" value="cow"">소
+    <input type="radio" name="animal" value="horse">말
+    <input type="button" value="선택된 값 확인" onclick="view()">
+</body>
+
+</html>
