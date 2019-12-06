@@ -4,7 +4,7 @@
         <title></title>
     </head>
     <style>
-        img { width: 300px; }
+        img { width: 300px; border: 4px solid coral; }
     </style>
     <script>
         var index = 0;
@@ -17,14 +17,10 @@
         }
 
         function changeImage() {
-            var myimg = document.getElementById('myimg');
-            myimg.src = arr[index].src;
-
             index++;
 
-            if(index == 7) {
-                index = 0;
-            }
+            var myimg = document.getElementById('myimg');
+            myimg.src = arr[index%7].src;
         }
     </script>
     <body>
