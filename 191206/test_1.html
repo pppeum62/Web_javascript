@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <style>
+        
+    </style>
+    <script>
+        function func() {
+            window.onblur = function() {
+                document.body.style.backgroundColor = "green";
+            }
+
+            window.onfocus = function() {
+                document.body.style.backgroundColor = "white";
+            }
+        }
+    </script>
+    <body onload="func()" id="mybody">
+        <h3>onfocus / onblur</h3>
+        <hr>
+        브라우저 밖 화면을 클릭해보세요<br>
+        배경 색이 변경됩니다.
+    </body>
+</html>
