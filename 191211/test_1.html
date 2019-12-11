@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <script>
+        function view() {
+            var c = document.getElementById("choose");
+            var index = c.selectedIndex;
+            var view = document.getElementById("myimg");
+            
+
+            if(index == 0) {
+                view.src = "../apple.jpg";
+            } else if(index == 1) {
+                view.src = "../strawberry.jpg";
+            } else if(index == 2) {
+                view.src = "../banana.jpg";
+            }
+        }
+    </script>
+    <body>
+        <h3>과일 출력</h3>
+        <hr>
+        <p>과일을 선택하면 이미지가 출력됩니다.</p>
+        <select id="choose" onchange="view()">
+            <option value="apple">사과</option>
+            <option value="strawberry">딸기</option>
+            <option value="banana">바나나</option>
+        </select>
+        <p><img src="../apple.jpg" id="myimg"></p>
+    </body>
+</html>
