@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <style>
+        img { width: 500px; }
+    </style>
+    <script>
+        function change() {
+            var ck = document.getElementsByName("choose");
+            var view = document.getElementById("myimg");
+
+            if(ck[0].checked == true) {
+                view.src = "../1.jpg";
+            } else if(ck[1].checked == true) {
+                view.src = "../2.jpg";
+            } else {
+                view.src = "../3.jpg";
+            }
+            
+        }
+    </script>
+    <body>
+        <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+        <hr>
+        <input type="radio" name="choose" value="1" onchange="change()" checked>1번 이미지
+        <input type="radio" name="choose" value="2" onchange="change()">2번 이미지
+        <input type="radio" name="choose" value="3" onchange="change()">3번 이미지
+        <p><img src="../1.jpg" id="myimg"></p>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script>
+        function enterPress() {
+            if(event.keyCode == 13) {
+                var myinput = document.getElementById("myinput").value;
+                var result = eval(myinput);
+
+                document.getElementById("result").value = result;
+            }
+        }
+    </script>
+    <body>
+        <h3>계산기 만들기</h3>
+        <hr>
+        <p>수식을 입력하고, enter를 입력하세요</p>
+        식 <input type="text" id="myinput" onkeydown="javascript:enterPress()"><br>
+        값 <input type="text" id="result">
+    </body>
+</html>
