@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>계산기</title>
+        <style>
+            input { width: 55px; height: 30px; text-align: center; }
+            #cal { width: 230px; height: 50px; text-align: left; }
+        </style>
+        <script>
+            function input(txt) {
+                var cal = document.getElementById('cal');
+                cal.value = cal.value + txt;
+            }
+
+            function result() {
+                var cal = document.getElementById('cal');
+                var result = eval(cal.value);
+                cal.value = result;
+            }
+
+            function back() {
+                var current = document.getElementById('cal');
+                current.value = current.value.substr(0, current.value.length - 1);
+            }
+
+            function reset() {
+                document.getElementById('cal').value = "0";
+            }
+
+            function sqrt() {
+                var result = document.getElementById('cal');
+                var root = Math.sqrt(result.value);
+                result.value = root;
+            }
+
+            function abs() {
+                var result = document.getElementById('cal');
+                var abs = Math.abs(result.value);
+                result.value = abs;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>계산기 만들기</h3>
+        <hr>
+        <input type="text" id="cal">
+        <table>
+            <tr>
+                <td><input type="button" value="BACK" onclick="back()"></td>
+                <td><input type="button" value="CE" onclick="reset()"></td>
+                <td><input type="button" value="C" onclick="reset()"></td>
+                <td><input type="button" value="=" onclick="result()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="input('7')"></td>
+                <td><input type="button" value="8" onclick="input('8')"></td>
+                <td><input type="button" value="9" onclick="input('9')"></td>
+                <td><input type="button" value="/" onclick="input('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="input('4')"></td>
+                <td><input type="button" value="5" onclick="input('5')"></td>
+                <td><input type="button" value="6" onclick="input('6')"></td>
+                <td><input type="button" value="*" onclick="input('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="input('1')"></td>
+                <td><input type="button" value="2" onclick="input('2')"></td>
+                <td><input type="button" value="3" onclick="input('3')"></td>
+                <td><input type="button" value="-" onclick="input('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="input('0')"></td>
+                <td><input type="button" value="+" onclick="input('+')"></td>
+                <td><input type="button" value="ROOT" onclick="sqrt()"></td>
+                <td><input type="button" value="ABS" onclick="abs()"></td>
+            </tr>
+        </table>
+    </body>
+</html>
