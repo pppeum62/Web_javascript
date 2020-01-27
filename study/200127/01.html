@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>끝말잇기 게임</title>
+        <script>
+            function func() {
+                var word = "기차";
+                while(true) {
+                    var answer = prompt(word);
+                    if(word[word.length - 1] === answer[0]) {
+                        word = answer;
+                    } else {
+                        alert('맞는 단어를 입력해주세요');
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="func()">
+        <h3>끝말잇기 게임</h3>
+    </body>
+</html>
