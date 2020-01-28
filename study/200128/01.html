@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>구구단 게임</title>
+        <script>
+            function func() {
+                while(true) {
+                    var first = Math.floor(Math.random() * 9) + 1;
+                    var second = Math.floor(Math.random() * 9) + 1;
+                    var result = first * second;
+
+                    var ch = true;
+                    
+                    while(ch) {
+                        var input = prompt(String(first) + " * " + String(second) + " = ?");
+
+                        if(result === Number(input)) {
+                            alert("정답입니다!");
+                            ch = false;
+                        } else {
+                            alert("오답입니다!");
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="func()">
+        <h3>구구단 게임</h3>
+    </body>
+</html>
